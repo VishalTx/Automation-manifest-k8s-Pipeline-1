@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: flask-test-app
-  replicas: 1
+  replicas: 3
   template:
     metadata:
       labels:
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: flask-test-app
-          image: vishal7500/image
+          image: vishal7500/image:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 9090
